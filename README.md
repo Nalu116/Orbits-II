@@ -13,5 +13,5 @@ ephem.m and lambert_solver.m are given functions where:
 ephem.m pulls and propagates spice data from a .mat file
 lambert_solver solves Lambert's Problem using Battin's method where user inputs two position vectors, the estimated time of flight, grafitational parameters, and some boundry values for numerical solver.
 
-I may or may not be incredibly lazy and leaving variables while changing input values to run one offs so when you see mumoon... yeah... grain of salt lol
+I may or may not be incredibly lazy and leaving variables while changing input values to run one offs so when you see mumoon... yeah... grain of salt lol ex:
 mumoon = 398600; %Gravitational Parameter of Earth (km^3/s^2)
