@@ -9,9 +9,6 @@ format long g
 
 'Input System Parameters';
 
-
-
-
 JD1_4 = 2459883;
 JD2_4 = 2460069;
 %{
@@ -475,6 +472,7 @@ for K=1:3
 end
 
 end
+
 
 
 
