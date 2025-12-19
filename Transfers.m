@@ -62,12 +62,7 @@ JD2=JD2_Mat(jj);
 TOF = ((JD2-JD1)*86400);
 [TOF_Matrix(ii,jj)] = TOF;
 
-
-
-
-
-
-%      function F = CelsiustoFar(X)
+% function F = CelsiustoFar(X)
  
 [A,P,V1,V2,conv] = Lambert(JD3_Matrix2(ii,1:3),JD2_Matrix2(jj,1:3),TOF,mu,JJ,n,tol,kmax);
 
@@ -83,9 +78,6 @@ Emoon = kepler_E(emoon, Mmoon);
 rmoon = amoon*(1-emoon*cos(Emoon));
 Vmoon = sqrt(2*((-mumoon/(2*amoon))+(mumoon/rmoon)));
 
-
-
-
 %Vinfmoon = V1 - Vmoon;
 
 %Vinfmoon = norm(transpose(V1)-JD3_Matrix2(ii,4:6));
@@ -94,8 +86,6 @@ Vmoon = sqrt(2*((-mumoon/(2*amoon))+(mumoon/rmoon)));
 C3 = (norm(transpose(V1)-JD3_Matrix2(ii,4:6)))^2;
 V_inf_minus=norm(transpose(V2)-JD2_Matrix2(jj,4:6));
 V100km2=sqrt(2*(((V_inf_minus^2)/2)+((4.2828*10^4)/(100+3390))));
-
-
 
 %{ 
 if  C3 < 80
@@ -205,12 +195,8 @@ V2 = [20.484,14.8256,0.0082]
 
 
 
-
-
-
-%Cartesian to Classical gross non function from homie Grant cause I left my
-%function on a campus computer
-
+%Cartesian to Classical gross non function for now cause I left my
+%function file on a campus computer sad
 
 cartesian(1) = 129140000;
 cartesian(2) = 70740000;
@@ -256,10 +242,6 @@ classical_new=[a_new,e_new,in_new,Omega_new,omega_new,M_new];
 disp(classical_new)
 
 
-
-
-
-
 %[sca,sce,sci,scRANN,scomega,scM] = classical_new;
 
 sca = classical_new(1)
@@ -268,11 +250,6 @@ sci = classical_new(3)
 scRANN = classical_new(4)
 scomega = classical_new(5)
 scM = classical_new(6)
-
-
-
-
-
 
 %[sc.a,sc.e,sc.i,sc.RANN,sc.omega,sc.M] = cart2classic(R1,V1,mu);
 scp = sca*(1-sce^2);
@@ -332,19 +309,6 @@ xlim([-3*AU 3*AU])
 ylim([-3*AU 3*AU])
 zlim([-3*AU 3*AU])
 title('Moon to Mars Trajectory')
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 % Found this function in Appendix D "MATLAB Scripts" 
 
@@ -531,6 +495,7 @@ for K=1:3
 end
 
 end
+
 
 
 
