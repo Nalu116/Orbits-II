@@ -41,7 +41,7 @@ for ii = 1:778*2    %~ 778 days in one synodic period (2.13 years)
 [JD3_Matrix2(ii,:)] = Classical2Cart(JD3_Matrix(ii,1),JD3_Matrix(ii,2),JD3_Matrix(ii,3),JD3_Matrix(ii,4),JD3_Matrix(ii,5),JD3_Matrix(ii,6),mumoon);
 
 end
-
+%Direction Cosine Matrix
 MoonDCM=[1 0 0;0 cosd(23.4144) sind(23.4144);0 -sind(23.4144) cosd(23.4144)];
 
 for i=1:778*2
@@ -530,4 +530,5 @@ for K=1:3
 end
 
 end
+
 
