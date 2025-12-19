@@ -3,7 +3,9 @@ This is not at all polished lol I just grabbed files from back in the day and th
 
 Classical_to_Cartesian_Orbital_Element_Converter.m is a function where user may input classical orbital elements to convert to cartesian positions and first rates of change about all three axes.
 
+Cartesian_to_Classical_Orbital_Element_Convertor.m is a script that converts user inputed cartesian values to classical orbital elements
 
+Transfers.m is a script that parses through planetary ephemeris data and plots first order approximations for orbital transfers using lambers TOF equations. Script 
 
 
 ephem.m and lambert_solver.m are given functions where:
