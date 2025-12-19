@@ -10,6 +10,8 @@ Cartesian_to_Classical_Orbital_Element_Convertor.m is a script that converts use
 
 Transfers.m is a script that parses through planetary ephemeris data and plots first order approximations for orbital transfers using lamberts TOF equations. Script intakes Julian Start and Julian arrival dates for whatever timeframe mission is desired. This specific script only applies to an Earth/Mars Interplanetary Direct Transfer (aka no VEEGA, Multi-Assist style trajectories), using patched conic method about the three spheres of influence (Earth-Centric, Helio-Centric, Mars-Centric) and plots specific energies to accomidate planetary transfers. 
 
+EDL where art thou... 
+
 
 ephem.m and lambert_solver.m are given functions where:
 
