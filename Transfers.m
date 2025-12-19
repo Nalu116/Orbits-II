@@ -29,7 +29,7 @@ mumoon = 398600; %Gravitational Parameter of Earth (km^3/s^2)
 [JD1_Mat3,JD2_Mat3]=meshgrid(JD1_Mat,JD2_Mat);
 
 
-for ii = 1:778*2    %~ 778 days in one synotic period (2.13 years)
+for ii = 1:778*2    %~ 778 days in one synodic period (2.13 years)
    
 [JD1_Matrix(ii,:)] = ephem(JD1_Mat(ii),"Earth");
 [JD2_Matrix(ii,:)] = ephem(JD2_Mat(ii),"Mars");
@@ -530,3 +530,4 @@ for K=1:3
 end
 
 end
+
