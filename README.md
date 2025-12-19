@@ -1,7 +1,7 @@
 # Orbits-II
 This is not at all polished lol I just grabbed files from back in the day and threw them here for reference (I was a terrible student) 
 
-Classical_to_Cartesian_Orbital_Element_Converter.m is a function where user may input classical orbital elements to convert to cartesian positions and first rates of change about all three axes
+Classical_to_Cartesian_Orbital_Element_Converter.m is a function where user may input classical orbital elements to convert to cartesian positions and first rates of change about all three axes.
 
 
 
