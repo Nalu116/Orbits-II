@@ -66,11 +66,7 @@ TOF = ((JD2-JD1)*86400);
  
 [A,P,V1,V2,conv] = Lambert(JD3_Matrix2(ii,1:3),JD2_Matrix2(jj,1:3),TOF,mu,JJ,n,tol,kmax);
 
-
-
 %patched conic method below : Vinf+ Moon = Vinf+earth -Vmoon
-
-
 amoon = JD3_Matrix(ii,1);
 emoon = JD3_Matrix(ii,2);
 Mmoon = JD3_Matrix(ii,6);
@@ -102,15 +98,12 @@ if  (C3 > 40) || (JD1_Mat3(jj,ii)>JD2_Mat3(jj,ii)) %% checking for absurdities
     
     C3_Mat(jj,ii) = NaN;
 
-
-    
 %{    
 else C3 < 80 
     C3_Mat(jj,ii)= (norm(transpose(V1)-JD3_Matrix2(ii,4:6)))^2;
 %} 
 else
     C3_Mat(jj,ii)= (norm(transpose(V1)-JD3_Matrix2(ii,4:6)))^2;
-    
     
 end
 
@@ -126,7 +119,6 @@ if (JD1_Mat3(jj,ii) >= JD2_Mat3(jj,ii))%+(186)
 end
 %} 
 
-
 if V100km2 <= 20
     V100km(jj,ii)=V100km2;
 end
@@ -134,8 +126,6 @@ end
 if JD1_Mat3(jj,ii) > JD2_Mat3(jj,ii)
     V100km(jj,ii) =NaN;
 end
-
-
     
 if V100km2 > 20  
     V100km(jj,ii) =NaN;
@@ -150,7 +140,6 @@ end
 ii %Just a counting term displayed to make sure code running
 
 end
-
 
 %Launch_prd=C3_Mat(:,1:30);
 Min_C3=min(C3_Mat(:))
@@ -172,28 +161,19 @@ xlabel(['Julian Departure Date'])
 ylabel(['Julian Arrival Date'])
 title('Mars 100km Atmospheric Entry Velocity (km/s) Over Two Synodic Periods')
 
-
-
-
 figure(3)
 contour(JD1_Mat3,JD2_Mat3,DeltaVMat,'ShowText','on')
 xlabel(['Julian Departure Date'])
 ylabel(['Julian Arrival Date'])
 title('Moon to Transfer Delta V Over Two Synodic Periods')
 
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 R1 = [129140000,70740000,61.6167]
 V1 = [-14.383,26.604,0.0000265]
 
 R2 = [112750000,-185710000,-105480]
 V2 = [20.484,14.8256,0.0082]
-
-
 
 %Cartesian to Classical gross non function for now cause I left my
 %function file on a campus computer sad
@@ -495,6 +475,7 @@ for K=1:3
 end
 
 end
+
 
 
 
