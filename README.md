@@ -1,4 +1,4 @@
-# Orbits-II: AE 5614 Spaceflight Mechanics
+# Orbits-II: AE 5614 Spaceflight Mechanics WORK IN PROGRESS - I HAVE NO IDEA WHERE ALL MY FILES FROM SCHOOL WENT THEY ARE SCATTERED AND INCOMPLETE LOL 
 
 This is not at all polished lol I just grabbed files from back in the day and threw them here for reference (I was a terrible student) 
 
