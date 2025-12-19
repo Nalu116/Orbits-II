@@ -46,10 +46,8 @@ JD3_Matrix2=JD1_Matrix2+JD3_Matrix2;
 
 for    ii = 1:778*2
 JD1=JD1_Mat(ii);
-%JD2=JD2_Mat(ii);
 
 for jj = 1:778*2
-%JD1=JD1_Mat(jj);
 JD2=JD2_Mat(jj);    
     
 TOF = ((JD2-JD1)*86400);
@@ -106,16 +104,11 @@ vsc1 = sqrt(2*((4903/1837.5)-(4903/3675)));
 %delta V = V new - V old
 [DeltaVMat(jj,ii)] = sqrt(C3_Mat(jj,ii)) - vsc1;
 
-%{
-if (JD1_Mat3(jj,ii) >= JD2_Mat3(jj,ii))%+(186)
-    C3_Mat(jj,ii) = NaN;
-end
-%} 
-
 if V100km2 <= 20
     V100km(jj,ii)=V100km2;
 end
 
+% Delete physically impossible results
 if JD1_Mat3(jj,ii) > JD2_Mat3(jj,ii)
     V100km(jj,ii) =NaN;
 end
@@ -468,6 +461,7 @@ for K=1:3
 end
 
 end
+
 
 
 
