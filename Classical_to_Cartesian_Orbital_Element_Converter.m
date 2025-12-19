@@ -42,7 +42,7 @@ theta = w + nu;          %Theta for Direction Cosine Matrix
                     
 
 %{
- Now to define the direction cosine matrix relation the inerial vernal 
+Now to define the Direction Cosine Matrix relating the Inertial Vernal 
 Equinox frame to polar rotating frame. Definine matrix as mcr for matrix
 column row, so m13 would be column 1 row 3 of the matrix
 %}
@@ -118,4 +118,5 @@ end
 end %kepler_E
 
 end
+
 
