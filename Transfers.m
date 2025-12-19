@@ -70,10 +70,9 @@ TOF = ((JD2-JD1)*86400);
  
 [A,P,V1,V2,conv] = Lambert(JD3_Matrix2(ii,1:3),JD2_Matrix2(jj,1:3),TOF,mu,JJ,n,tol,kmax);
 
-% Wait might need to call lambert a couple times. Moon wrt earth, earth wrt
-% sun. S/c to mars wrt sun. hmmmmm
 
-%Actually, may go with patched conic method below : Vinf+ Moon = Vinf+earth -Vmoon
+
+%patched conic method below : Vinf+ Moon = Vinf+earth -Vmoon
 
 
 amoon = JD3_Matrix(ii,1);
@@ -529,4 +528,5 @@ for K=1:3
     V1(K)=(1/G)*(R2(K)-(F*R1(K)));
     V2(K)=FDOT*R1(K)+GDOT*V1(K);
 end
+
 end
