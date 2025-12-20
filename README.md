@@ -1,4 +1,4 @@
-# Orbits-II: AE 5614 Spaceflight Mechanics - wip / I have no idea where all my files from school went, I recently discovered an old usb drive. They are scattered.
+# Orbits-II: AE 5614 Spaceflight Mechanics - wip / I have no idea where all my files from school went, I recently discovered an old usb drive, figured I'd throw them here
 
 This is not at all polished lol I just grabbed files from back in the day and threw them here for reference
 
