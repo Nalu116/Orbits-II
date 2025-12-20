@@ -35,7 +35,6 @@ JD2=JD2_Mat(jj);
 
 TOF = ((JD2-JD1)*86400);
 [A,P,V1,V2,conv] = Lambert(JD1_Matrix2(ii,1:3),JD2_Matrix2(jj,1:3),TOF,mu,JJ,n,tol,kmax);
-2/25/22 2:52 PM D:\UPDATED ORBITS\HW4.m 2 of 6
 C3 = (norm(transpose(V1)-JD1_Matrix2(ii,4:6)))^2;
 V_inf_minus=norm(transpose(V2)-JD2_Matrix2(jj,4:6));
 V100km2=sqrt(2*(((V_inf_minus^2)/2)+((4.2828*10^4)/(100+3390))));
@@ -67,7 +66,6 @@ end
 end
 Launch_prd=C3_Mat(:,1:30);
 Min_C3=min(Launch_prd(:))
-2/25/22 2:52 PM D:\UPDATED ORBITS\HW4.m 3 of 6
 Launch_prd2=V100km(1:30,:);
 MaxEntry=max(Launch_prd2(:))
 MinEntry=min(Launch_prd2(1:30))
@@ -112,7 +110,6 @@ ratio = (M-(E - e*sin(E)))/(-1 + e*cos(E));
 E = E - ratio;
 end
 end %kepler_E
-2/25/22 2:52 PM D:\UPDATED ORBITS\HW4.m 4 of 6
 function [A,P,V1,V2,conv] = Lambert(R1,R2,TOF,mu,JJ,n,tol,kmax)
 %{
  Programmer: Grant Hecht
@@ -155,7 +152,6 @@ end
 % Find Chord
 c = sqrt(norm(R1)^2 + norm(R2)^2 - 2*norm(R1)*norm(R2)*cos(ta));
 % Find Semi-Perimeter
-2/25/22 2:52 PM D:\UPDATED ORBITS\HW4.m 5 of 6
 s = (norm(R1) + norm(R2) + c)/2;
 % Find Lambda
 lambda = sqrt(norm(R1)*norm(R2))*cos(ta/2)/s;
@@ -199,7 +195,6 @@ while abs(DX) > tol
  f = 1;
  % Itterate to Calculate levels 4 -> n
  for j = n:-1:4
-2/25/22 2:52 PM D:\UPDATED ORBITS\HW4.m 6 of 6
  ceta = j^2/((2*j)^2-1);
  f = 1 + ceta*eta/f;
  end
